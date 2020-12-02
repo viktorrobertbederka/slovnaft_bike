@@ -7,7 +7,7 @@ def getRoutesData(table_name: str) -> list:
     """
     Getting unique route IDs list
     """
-    con = create_engine("oracle://ba_slovnaft_bike:heslo@172.25.6.52:1521/orcl")
+    con = create_engine("oracle://username:password@ip:port/service_name")
     que1 = con.execute("""select routeid, gpslat, gpslon from {}
                           where gpslat != '0'
                           and gpslon != '0'
