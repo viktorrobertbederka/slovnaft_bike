@@ -87,6 +87,7 @@ def pushData(table_name):
                        
 def updateSlovnaftTableDistance(table_name):
     pushData(table_name)
+    print("Done")
     
     
       
