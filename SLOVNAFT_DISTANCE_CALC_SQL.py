@@ -77,7 +77,7 @@ def putDistancesTogether(table_name: str) -> list:
     return result
 
 def pushData(table_name):
-    con = create_engine("oracle://ba_slovnaft_bike:heslo@172.25.6.52:1521/orcl")
+    con = create_engine("oracle://username:password@ip:port/service_name")
     data = putDistancesTogether(table_name)
     con.execute("alter table {} add cumulative_distance varchar2(256)".format(table_name))
     for i in tqdm(data):
